@@ -71,4 +71,4 @@ spec:
       image: kavya478/backend:2.0
       envFrom:
       - ConfigMapRef:
-        name: backend
+          name: backend
