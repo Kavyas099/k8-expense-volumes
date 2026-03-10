@@ -7,14 +7,14 @@ metadata:
     project: expense
     tier: mysql
 spec:
-  clustrtIP: None
+  clusterIP: None
   selector:
     project: expense
     tier: mysql
-    ports:
-    - protocol: TCP
-      port: 3306
-      targetPort: 3306
+  ports:
+  - protocol: TCP
+    port: 3306
+    targetPort: 3306
 
 
 ---
@@ -45,7 +45,7 @@ metadata:
   namespace: expense
   labels:
     project: expense
-    tier: expense
+    tier: mysql
 spec:
   selector:
     matchLabels:
@@ -57,9 +57,9 @@ spec:
   template:
     metadata:
       labels:
-        app: mysql
+     
         project: expense
-        tier: db # has to match .spec.selector.matchLabels
+        tier: mysql # has to match .spec.selector.matchLabels
     spec:
     
       containers:
