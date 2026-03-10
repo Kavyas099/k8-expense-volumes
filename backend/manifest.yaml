@@ -55,7 +55,7 @@ metadata:
     project: expense
     tier: backend
 spec:
-  repliacs: 2
+  replicas: 2
   selector:
     matchLabels:
       project: expense
@@ -65,9 +65,9 @@ spec:
       labels:
         project: expense
         tier: backend
-      containers:
-      - name: nginx
-        image: kavya478/backend:2.0
-        envFrom:
-        - ConfigMapRef:
-          name: backend
+    containers:
+    - name: nginx
+      image: kavya478/backend:2.0
+      envFrom:
+      - ConfigMapRef:
+        name: backend
