@@ -65,6 +65,7 @@ spec:
       labels:
         project: expense
         tier: backend
+    spec:
     containers:
     - name: nginx
       image: kavya478/backend:2.0
