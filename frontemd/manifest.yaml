@@ -96,7 +96,7 @@ spec:
               path: nginx.conf
       containers:
       - name: nginx
-        image: kavya478/frontend:1.2.0
+        image: kavya478/frontend:2.0
         resources:
           # soft limit
           requests:
